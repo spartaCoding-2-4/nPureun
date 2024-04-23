@@ -1,7 +1,7 @@
 # 계산기 프로그램 설명서
 ---
-## 콘솔창에서 수식쓰기
-
+<details>
+<summary>콘솔창에서 수식쓰기</summary> 
 ### 단일 수식
 ![alt text](image.png)
 
@@ -12,6 +12,7 @@
 
 연쇄수식은 앞에 "$"를 붙여 호출합니다.
 
+</details>
 ---
 ## 예외처리
 ![alt text](image-2.png)
