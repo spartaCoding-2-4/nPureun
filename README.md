@@ -2,6 +2,7 @@
 ---
 <details>
 <summary>콘솔창에서 수식쓰기</summary> 
+
 ### 단일 수식
 ![alt text](image.png)
 
