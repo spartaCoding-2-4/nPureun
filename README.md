@@ -16,7 +16,9 @@
 </details>
 
 ---
-## 예외처리
+<details>
+<summary>예외처리</summary> 
+
 ![alt text](image-2.png)
 
 잘못된 식이면, 에러메세지를 띄웁니다.
@@ -29,8 +31,12 @@
 
 숫자가 아닌 값을 계산을 하려하면, 해당 메세지를 띄웁니다.
 
+</details>
+
 ---
-## 부가기능
+<details>
+<summary>부가기능</summary> 
+
 ![alt text](image-5.png)
 
 의미 없는 문자가 들어가 있어도, 계산식을 추출해 냅니다.
@@ -38,6 +44,8 @@
 ![alt text](image-6.png)
 
 음수와 소수에 대한 계산이 가능합니다. (소수둘째자리까지 표현하며, 코틀린의 StringFormat에 따릅니다.)
+
+</details>
 
 
 
