@@ -63,6 +63,7 @@
 ## 함수설명
 <details>
 <summary>적용된 함수의 역할을 간략히 설명합니다.</summary> 
+---
 
 ### Manager Class
 Manager Class는 프로그램의 메인 클래스 입니다. 
