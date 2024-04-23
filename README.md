@@ -50,5 +50,21 @@
 
 </details>
 
+---
+## 프로그램 구조
+<details>
+<summary>프로그램 구조를 간략히 도식화 합니다.</summary> 
+
+![alt text](image-8.png)
+
+</details>
+
+---
+## 코드설명
+<details>
+<summary>적용된 로직을 간략히 설명합니다.</summary> 
+
+</details>
+
 
 
