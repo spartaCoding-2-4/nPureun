@@ -1,7 +1,8 @@
 # 계산기 프로그램 설명서
 ---
+## 콘솔창에서 수식쓰기
 <details>
-<summary>콘솔창에서 수식쓰기</summary> 
+<summary>보기</summary> 
 
 ### 단일 수식
 ![alt text](image.png)
@@ -16,8 +17,9 @@
 </details>
 
 ---
+## 예외처리
 <details>
-<summary>예외처리</summary> 
+<summary>보기</summary> 
 
 ![alt text](image-2.png)
 
@@ -34,8 +36,9 @@
 </details>
 
 ---
+## 부가기능
 <details>
-<summary>부가기능</summary> 
+<summary>보기</summary> 
 
 ![alt text](image-5.png)
 
