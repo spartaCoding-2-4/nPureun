@@ -65,6 +65,8 @@
 <summary>적용된 함수의 역할을 간략히 설명합니다.</summary> 
 
 ### Manager Class
+매니저 클래스는 프로그램의 메인 클래스 입니다. 
+
 #### private fun stringFilter(inputString: String):String
 
 = 입력받은 문자열을 1차적으로 필터링 합니다. 의미없는 문자를 무시합니다.
@@ -74,6 +76,28 @@
 = 필터링된 문자에서 연산자와 숫자를 추출합니다. 해당 함수에서 소수점과 음수에 대한 대응을 하고, 
 
 최종적으로 파싱가능한 계산 식을 도출해 냅니다.
+
+#### private fun inputCalculate(): String
+
+= 사용자와 대화를 하는 함수입니다. 해당함수에서 입력을 받고, 종료등에 대한 분기를 판단합니다.
+
+#### private fun extractCalculate(inputString: String):List<String>
+
+= 파싱가능한 문자열을 리스트 형태로 반환하여 핸들링이 용이하게 합니다. 
+
+해당 함수는 단일 계산 로직에서 사용합니다.
+
+#### private fun getResult(calculate: List<String>)
+
+= 핸들링이 가능해진 리스트를 통해 연산자를 판단하고, override 함수를 호출, 예외등을 처리합니다.
+
+#### fun manual()
+
+= 프로그램의 메인이 되는 함수입니다. 계산기의 시퀀스를 관리합니다.
+
+
+
+
 
 </details>
 
