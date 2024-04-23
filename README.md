@@ -110,6 +110,25 @@ StackCalculator Class 내지 Postfix Class라고 부릅니다.
 
 연쇄수식은 해당 클래스에서 처리됩니다.
 
+#### private fun convertCalc(inputString: String):List<String> 
+
+= 입력받은 연쇄 계산식은 앞선 포맷을 거쳐 파싱가능한 형태로 넘어옵니다.
+
+그것을 통해 후위연산으로 바꾸는 알고리즘을 실행하고,
+
+파싱된 토큰을 리스트로 변환해 리턴합니다.
+
+#### private fun getPriority(operator: String): Int
+
+= 후위연산 알고리즘에 필요한 우선순위를 세팅합니다.
+
+#### fun postfixCalc(inputString: String)
+
+= 연쇄수식을 입력받았을시 호출하는 함수입니다. 
+
+넘겨받은 문자열을 convertCalc를 통해 리스트로 반환받으면,
+
+후위연산 계산 알고리즘을 수행하고, 예외처리를 합니다.
 
 </details>
 
