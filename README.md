@@ -65,7 +65,11 @@
 <summary>적용된 함수의 역할을 간략히 설명합니다.</summary> 
 
 ---
+### Calculator Class
+Calculator Class는 추상클래스로 되어 있고, 추상함수 하나만을 가지고 있으며,
+자식클래스에서 Override하여 함수를 구체화 합니다.
 
+---
 ### Manager Class
 Manager Class는 프로그램의 메인 클래스 입니다. 
 
@@ -98,11 +102,6 @@ Manager Class는 프로그램의 메인 클래스 입니다.
 #### fun manual()
 
 = 프로그램의 메인이 되는 함수입니다. 계산기의 시퀀스를 관리합니다.
-
----
-### Calculator Class
-Calculator Class는 추상클래스로 되어 있고, 추상함수 하나만을 가지고 있으며,
-자식클래스에서 Override하여 함수를 구체화 합니다.
 
 ---
 ### StackCalculator Class
