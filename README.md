@@ -65,11 +65,11 @@
 <summary>적용된 함수의 역할을 간략히 설명합니다.</summary> 
 
 ### Manager Class
-private fun stringFilter(inputString: String):String
+#### private fun stringFilter(inputString: String):String
 
 = 입력받은 문자열을 1차적으로 필터링 합니다. 의미없는 문자를 무시합니다.
 
-private fun convertString(inputString: String): String 
+#### private fun convertString(inputString: String): String 
 
 = 필터링된 문자에서 연산자와 숫자를 추출합니다. 해당 함수에서 소수점과 음수에 대한 대응을 하고, 
 
