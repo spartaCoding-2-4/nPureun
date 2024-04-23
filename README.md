@@ -65,7 +65,7 @@
 <summary>적용된 함수의 역할을 간략히 설명합니다.</summary> 
 
 ### Manager Class
-매니저 클래스는 프로그램의 메인 클래스 입니다. 
+Manager Class는 프로그램의 메인 클래스 입니다. 
 
 #### private fun stringFilter(inputString: String):String
 
@@ -95,8 +95,16 @@
 
 = 프로그램의 메인이 되는 함수입니다. 계산기의 시퀀스를 관리합니다.
 
+---
+### Calculator Class
+Calculator Class는 추상클래스로 되어 있고, 추상함수 하나만을 가지고 있으며,
+자식클래스에서 Override하여 함수를 구체화 합니다.
 
+---
+### StackCalculator Class
+StackCalculator Class 내지 Postfix Class라고 부릅니다.
 
+연쇄수식은 해당 클래스에서 처리됩니다.
 
 
 </details>
