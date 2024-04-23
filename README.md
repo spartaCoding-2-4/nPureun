@@ -2,7 +2,7 @@
 ---
 ## 콘솔창에서 수식쓰기
 <details>
-<summary>보기</summary> 
+<summary>프로그램 이용법을 알 수 있습니다.</summary> 
 
 ### 단일 수식
 ![alt text](image.png)
@@ -19,7 +19,7 @@
 ---
 ## 예외처리
 <details>
-<summary>보기</summary> 
+<summary>예외처리에 대해 알 수 있습니다.</summary> 
 
 ![alt text](image-2.png)
 
@@ -38,7 +38,7 @@
 ---
 ## 부가기능
 <details>
-<summary>보기</summary> 
+<summary>부가기능에 대해 알 수 있습니다.</summary> 
 
 ![alt text](image-5.png)
 
