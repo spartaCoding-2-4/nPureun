@@ -12,7 +12,7 @@ import java.util.Stack
 
 class StackCalculator {
    private val operators = listOf('(', ')', '+', '-', '*', '/', '%')
-   fun convertCalc(inputString: String) {
+   private fun convertCalc(inputString: String):List<String> {
       val stack = Stack<String>()
       val postfix = mutableListOf<String>()
       inputString.split(" ").forEach { token ->
@@ -38,7 +38,7 @@ class StackCalculator {
       }
       while (stack.isNotEmpty()) postfix.add(stack.pop())
       println("후위연산 변환: $postfix")
-      postfixCalc(postfix)
+      return postfix
    }
 
    private fun getPriority(operator: String): Int =
@@ -49,7 +49,8 @@ class StackCalculator {
          else -> -1
       }
 
-   private fun postfixCalc(postfix: List<String>) {
+   fun postfixCalc(inputString: String) {
+      val postfix=convertCalc(inputString)
       val stack = mutableListOf<Double>()
       try {
          for (token in postfix) {

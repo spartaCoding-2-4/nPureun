@@ -102,7 +102,7 @@ class Manager()
             val calculate=inputCalculate()
             if(calculate=="Exit") break
             else if(calculate.first()=='$')
-                StackCalculator().convertCalc(calculate.substring(1))
+                StackCalculator().postfixCalc(calculate.substring(1))
             else getResult(extractCalculate(calculate))
         }
         println("계산기를 종료합니다.")
