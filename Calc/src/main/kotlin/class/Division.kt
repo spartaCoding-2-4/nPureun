@@ -1,5 +1,7 @@
-class Division(x:Double, y:Double) :Calculator(x,y) {
-    override fun calculateResult() : Double =
+package `class`
+
+class Division() : Calculator() {
+    override fun calculateResult(x:Double, y:Double) : Double =
         if(x==0.0) Double.NaN
         else String.format("%.2f", x / y).toDouble()
 }

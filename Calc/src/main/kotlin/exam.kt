@@ -1,3 +1,4 @@
+import `class`.Manager
 
 fun main()
 {

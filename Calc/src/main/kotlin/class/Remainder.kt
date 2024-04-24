@@ -1,6 +1,8 @@
-class Remainder(x:Double, y:Double) :Calculator(x,y)
+package `class`
+
+class Remainder() : Calculator()
 {
-    override fun calculateResult(): Double =
+    override fun calculateResult(x:Double, y:Double): Double =
         if(y==0.0) Double.NaN
         else String.format("%.2f",x%y).toDouble()
 }

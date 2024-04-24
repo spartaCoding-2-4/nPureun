@@ -1,4 +1,6 @@
-abstract class Calculator(protected var x:Double =0.0, protected var y:Double= 0.0)
+package `class`
+
+abstract class Calculator()
 {
-    abstract fun calculateResult(): Double
+    abstract fun calculateResult(x:Double, y:Double): Double
 }
