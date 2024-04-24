@@ -10,9 +10,7 @@ class Manager()
     {
         print("식을 적으세요(앞에 $ 붙이면 연쇄수식 호출 / x= 종료) : ")
         val inputString=readln()
-        if(inputString.find { it=='x' }!=null)
-            return "Exit"
-        return inputString
+        return if('x' == inputString.first()) "Exit" else inputString
     }
 
     /** 계산기 메인 함수 */
