@@ -16,6 +16,9 @@ class Manager()
     /** 계산기 메인 함수 */
     fun manual()
     {
+        //시퀀스를 관리는 여기서 이루어지니까,
+        //다른 함수가 시퀀스에 영향을 못주도록
+        //유틸클래스를 함수 내부에서 호출
         val stringUt= StringUtile()
         val calcUt= CalculateUtile()
         while (true)
