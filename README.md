@@ -1,6 +1,6 @@
 # 계산기 프로그램
 
-![header](https://capsule-render.vercel.app/api?type=waving)
+![header](https://capsule-render.vercel.app/api?type=waving,text=Hello%World!)
 
 ## 🔷 목차 🔷
 [기능과 사용법](#기능과-사용법)
