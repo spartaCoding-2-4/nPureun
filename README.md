@@ -123,11 +123,11 @@ CalculateUtile Class는 Calculator Class와의 연결을 수행하며,
 
 #### fun postfixResult(postfix: List<String>)
 
-= 연쇄수식의 계산 알고리즘을 통해 calculate함수틑 통한 값들의 최종적 결과를 리턴합니다.
+= 연쇄수식의 계산 알고리즘을 통해 calculate함수틑 통한 값들의 최종적 결과를 출력합니다.
 
 ####  fun singleResult(calculate: List<String>)
 
-= 단일수식의 최종결과를 리턴합니다.
+= 단일수식의 최종결과를 출력합니다.
 
 </details>
 
