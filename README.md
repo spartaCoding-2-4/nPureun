@@ -1,6 +1,9 @@
-# 계산기 프로그램
+![header](https://capsule-render.vercel.app/api?type=waving&text=n.Pureun&height=200&color=auto)
 
-![header](https://capsule-render.vercel.app/api?type=waving,text=Hello%World!)
+# 🖥 계산기 프로그램 🖥
+### 계산기 프로그램을 설명합니다
+
+---
 
 ## 🔷 목차 🔷
 [기능과 사용법](#기능과-사용법)
