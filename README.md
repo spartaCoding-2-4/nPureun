@@ -2,7 +2,7 @@
 
 유저의 입력에 따라 계산결과를 출력합니다.
 
-## 목차
+## 🔷 목차 🔷
 [기능과 사용법](#기능과-사용법)
 
 [프로그램 구조](#프로그램-구조)
@@ -10,11 +10,11 @@
 [기능 설명](#기능-설명)
 
 ---
-## 기능과 사용법
+## 📒 기능과 사용법
 
 프로그램의 사용법과, 기능을 소개합니다.
 
-### 📒사용법
+### 👾 사용법
 
 단일 수식은 단순 문자열을 입력하고, 연쇄수식은 앞에 "$"를 붙입니다.
 
@@ -33,7 +33,7 @@
 계산 결과 : 4.0
 ```
 
-### 부가기능
+### 👾 부가기능
 
 음수와 소수점에 대응가능하고, 의미없는 문자를 필터링해 식을 추출합니다.
 
@@ -51,7 +51,7 @@
 계산 결과 : -0.2
 ```
 
-### 예외처리
+### 👾 예외처리
 
 잘못된 식이나, 입력에 대한 에러메세지를 띄웁니다.
 
@@ -73,18 +73,18 @@
 ```
 
 ---
-## 프로그램 구조
+## 🌃 프로그램 구조
 
 프로그램의 기능별 호출구조를 간략히 도식화 했습니다.
 
 ![image-9](https://github.com/npureaun/ReadMeUtile/assets/98468118/bd65669b-1fda-4046-b580-93b3c3f30ad0)
 
 ---
-## 기능 설명
+## ⚒ 기능 설명
 
 기능을 구현한 함수와 로직을 설명합니다.
 
-### abstract class Calculator()
+### 👾 abstract class Calculator()
 <details>
 <summary><code>Calculator Class</code>는 추상클래스로 되어 있고, 추상함수 하나만을 가지고 있으며,
   
@@ -100,7 +100,7 @@
 
 </details>
 
-### class Manager()
+### 👾 class Manager()
 <details>
 <summary>프로그램의 <code>Main Class</code> 입니다. </summary>
 
@@ -132,7 +132,7 @@
 
 </details>
 
-### Class CalculateUtile()
+### 👾 Class CalculateUtile()
 
 <details>
 <summary><code>Calculator Class</code>와의 연결을 수행하며, 적절한 호출로 단일, 연쇄 식을 적용합니다.</summary>
@@ -209,7 +209,7 @@
   
 </details>
 
-### class StringUtile()
+### 👾 class StringUtile()
 <details>
 <summary>문자열 <code>포맷과 변환</code>을 수행합니다.</summary>
 
