@@ -83,5 +83,8 @@ class StackCalculator {
       } catch (e: Error) {
          println(e.message)
       }
+      catch (e:NumberFormatException) {
+         println("올바르지 않은 숫자형식 입니다.")
+      }
    }
 }
