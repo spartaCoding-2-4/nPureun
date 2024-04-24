@@ -1,5 +1,7 @@
 package `class`
 
+import java.util.*
+
 class StringUtile {
 
     /**의미없는 문자 필터링*/
@@ -50,4 +52,45 @@ class StringUtile {
     {
         return inputString.replace("\\s+".toRegex(), " ").trim().split(" ")
     }
+
+    /**후위연산으로 변환*/
+    fun postfixConvert(inputString: String):List<String> {
+        val operators = listOf('(', ')', '+', '-', '*', '/', '%')
+
+        val stack = Stack<String>()
+        val postfix = mutableListOf<String>()
+        inputString.split(" ").forEach { token ->
+            if (token.isNotBlank()) {
+                if (token in operators.toString()) {
+                    if (token == "(") stack.add(token)
+                    else if (token == ")") {
+                        while (stack.isNotEmpty()) {
+                            val op = stack.pop()
+                            if (op == "(") break
+                            else postfix.add(op)
+                        }
+                    } else {
+                        while (stack.isNotEmpty()) {
+                            if (getPriority(token) <= getPriority(stack.peek()))
+                                postfix.add(stack.pop())
+                            else break
+                        }
+                        stack.add(token)
+                    }
+                } else postfix.add(token)
+            }
+        }
+        while (stack.isNotEmpty()) postfix.add(stack.pop())
+        println("후위연산 변환: $postfix")
+        return postfix
+    }
+
+    /**후위연산 우선순위*/
+    private fun getPriority(operator: String): Int =
+        when (operator) {
+            "(", ")" -> 0
+            "+", "-" -> 1
+            "*", "/", "%" -> 2
+            else -> -1
+        }
 }

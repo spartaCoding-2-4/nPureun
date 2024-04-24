@@ -5,10 +5,6 @@ package `class`
 // $(-2+(-5))*3-(-8/2)+(10%3)*4.0+2.5-1.2
 class Manager()
 {
-
-    private val stringUt= StringUtile()
-    private val calcUt= CalculateUtile()
-
     /**사용자와의 대화 함수*/
     private fun inputCalculate(): String
     {
@@ -16,19 +12,23 @@ class Manager()
         val inputString=readln()
         if(inputString.find { it=='x' }!=null)
             return "Exit"
-        else if(inputString.isBlank()) return "-1"
-        return stringUt.convertString(inputString)
+        //else if(inputString.isBlank()) return " "
+        return inputString
     }
 
     /** 계산기 메인 함수 */
     fun manual()
     {
+        val stringUt= StringUtile()
+        val calcUt= CalculateUtile()
         while (true)
         {
-            val calculate=inputCalculate()
+            var calculate=inputCalculate()
             if(calculate=="Exit") break
-            else if(calculate.first()=='$')
-                calcUt.postfixResult(calculate.substring(1))
+
+            calculate=stringUt.convertString(calculate)
+            if(calculate.first()=='$')
+                calcUt.postfixResult(stringUt.postfixConvert(calculate.substring(1)))
             else calcUt.singleResult(stringUt.getParsingList(calculate))
         }
         println("계산기를 종료합니다.")

@@ -28,10 +28,9 @@ class CalculateUtile {
     }
 
     /**연쇄수식 계산*/
-    fun postfixResult(inputString: String) {
+    fun postfixResult(postfix: List<String>) {
         val operators = listOf('(', ')', '+', '-', '*', '/', '%')
 
-        val postfix=PostfixConverter().convertCalc(inputString)
         val stack = mutableListOf<Double>()
         try {
             for (token in postfix) {
