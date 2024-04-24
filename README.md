@@ -1,6 +1,6 @@
 # 계산기 프로그램
 
-유저의 입력에 따라 계산결과를 출력합니다.
+![header](https://capsule-render.vercel.app/api?type=waving)
 
 ## 🔷 목차 🔷
 [기능과 사용법](#기능과-사용법)
