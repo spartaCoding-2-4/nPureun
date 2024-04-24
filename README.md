@@ -1,4 +1,4 @@
-![header](https://capsule-render.vercel.app/api?type=waving&text=n.Pureun&height=200&color=auto)
+![header](https://capsule-render.vercel.app/api?type=waving&text=n.Pureun&height=200&color=73C2FB&&animation=fadeIn&fontColor=003153)
 
 # 🖥 계산기 프로그램 🖥
 ### 계산기 프로그램을 설명합니다
@@ -83,7 +83,7 @@
 ![image-9](https://github.com/npureaun/ReadMeUtile/assets/98468118/bd65669b-1fda-4046-b580-93b3c3f30ad0)
 
 ---
-## ⚒ 기능 설명
+## 🪐 기능 설명
 
 기능을 구현한 함수와 로직을 설명합니다.
 
