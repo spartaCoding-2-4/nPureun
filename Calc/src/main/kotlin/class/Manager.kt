@@ -12,7 +12,6 @@ class Manager()
         val inputString=readln()
         if(inputString.find { it=='x' }!=null)
             return "Exit"
-        //else if(inputString.isBlank()) return " "
         return inputString
     }
 

@@ -55,7 +55,7 @@
 <details>
 <summary>프로그램 구조를 간략히 도식화 합니다.</summary> 
 
-![alt text](image-8.png)
+![alt text](image-9.png)
 
 </details>
 
@@ -73,6 +73,18 @@ Calculator Class는 추상클래스로 되어 있고, 추상함수 하나만을 
 ### Manager Class
 Manager Class는 프로그램의 메인 클래스 입니다. 
 
+#### fun manual()
+
+= 프로그램의 메인이 되는 함수입니다. 계산기의 시퀀스를 관리합니다.
+
+#### private fun inputCalculate(): String
+
+= 사용자와 대화를 하는 함수입니다. 해당함수에서 입력을 받습니다.
+
+---
+### StringUtile Class
+StringUtile Class는 문자열 포맷과 변환을 수행합니다.
+
 #### private fun stringFilter(inputString: String):String
 
 = 입력받은 문자열을 1차적으로 필터링 합니다. 의미없는 문자를 무시합니다.
@@ -83,51 +95,39 @@ Manager Class는 프로그램의 메인 클래스 입니다.
 
 최종적으로 파싱가능한 계산 식을 도출해 냅니다.
 
-#### private fun inputCalculate(): String
-
-= 사용자와 대화를 하는 함수입니다. 해당함수에서 입력을 받고, 종료등에 대한 분기를 판단합니다.
-
-#### private fun extractCalculate(inputString: String):List<String>
+#### private fun getParsingList(inputString: String):List<String>
 
 = 파싱가능한 문자열을 리스트 형태로 반환하여 핸들링이 용이하게 합니다. 
 
 해당 함수는 단일 계산 로직에서 사용합니다.
 
-#### private fun getResult(calculate: List<String>)
+#### fun postfixConvert(inputString: String):List<String> 
 
-= 핸들링이 가능해진 리스트를 통해 연산자를 판단하고, override 함수를 호출, 예외등을 처리합니다.
+= 파싱가능한 문자열을 알고리즘을 거쳐 후위연산을 도츌한 리스트로 반환합니다.
 
-해당 함수는 단일 계산 로직에서 사용합니다.
-
-#### fun manual()
-
-= 프로그램의 메인이 되는 함수입니다. 계산기의 시퀀스를 관리합니다.
-
----
-### StackCalculator Class
-StackCalculator Class 내지 Postfix Class라고 부릅니다.
-
-연쇄수식은 해당 클래스에서 처리됩니다.
-
-#### private fun convertCalc(inputString: String):List<String> 
-
-= 입력받은 연쇄 계산식은 앞선 포맷을 거쳐 파싱가능한 형태로 넘어옵니다.
-
-그것을 통해 후위연산으로 바꾸는 알고리즘을 실행하고,
-
-파싱된 토큰을 리스트로 변환해 리턴합니다.
+해당 함수는 연쇄 수식 로직에서 사용합니다.
 
 #### private fun getPriority(operator: String): Int
 
-= 후위연산 알고리즘에 필요한 우선순위를 세팅합니다.
+= 후위연산 변환 알고리즘에 필요한 우선순위 함수입니다.
 
-#### fun postfixCalc(inputString: String)
+---
+### CalculateUtile Class
+CalculateUtile Class는 계산 클래스와의 연결을 수행하며, 
 
-= 연쇄수식을 입력받았을시 호출하는 함수입니다. 
+적절한 호출로 단일, 연쇄 식을 적용합니다.
 
-넘겨받은 문자열을 convertCalc를 통해 리스트로 반환받으면,
+#### private fun calculate(x: Double, y: Double, oper: String):Double
 
-후위연산 계산 알고리즘을 수행하고, 예외처리를 합니다.
+= 전달 받은 인자를 통해 추상클래스를 호출하여 결과를 리턴합니다. 직접적인 계산은 이 함수틑 통합니다.
+
+#### fun postfixResult(postfix: List<String>)
+
+= 연쇄수식의 계산 알고리즘을 통해 calculate함수틑 통한 값들의 최종적 결과를 리턴합니다.
+
+####  fun singleResult(calculate: List<String>)
+
+= 단일수식의 최종결과를 리턴합니다.
 
 </details>
 
