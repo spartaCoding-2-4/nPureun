@@ -1,4 +1,4 @@
-![header](https://capsule-render.vercel.app/api?type=waving&text=n.Pureun&height=200&color=73C2FB&&animation=fadeIn&fontColor=003153)
+![header](https://capsule-render.vercel.app/api?type=waving&text=n.Pureun&height=200&color=73C2FB&animation=fadeIn&fontColor=003153)
 
 # 🖥 계산기 프로그램 🖥
 ### 계산기 프로그램을 설명합니다
