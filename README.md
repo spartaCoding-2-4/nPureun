@@ -103,7 +103,7 @@ StringUtile Class는 문자열 포맷과 변환을 수행합니다.
 
 #### fun postfixConvert(inputString: String):List<String> 
 
-= 파싱가능한 문자열을 알고리즘을 거쳐 후위연산을 도츌한 리스트로 반환합니다.
+= 파싱가능한 문자열을 알고리즘을 거쳐 후위연산을 도출한 리스트로 반환합니다.
 
 해당 함수는 연쇄 수식 로직에서 사용합니다.
 
@@ -113,7 +113,7 @@ StringUtile Class는 문자열 포맷과 변환을 수행합니다.
 
 ---
 ### CalculateUtile Class
-CalculateUtile Class는 계산 클래스와의 연결을 수행하며, 
+CalculateUtile Class는 Calculator Class와의 연결을 수행하며, 
 
 적절한 호출로 단일, 연쇄 식을 적용합니다.
 
