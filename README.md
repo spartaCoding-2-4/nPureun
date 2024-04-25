@@ -80,7 +80,7 @@
 
 프로그램의 기능별 호출구조를 간략히 도식화 했습니다.
 
-![image-9](https://github.com/npureaun/ReadMeUtile/assets/98468118/bd65669b-1fda-4046-b580-93b3c3f30ad0)
+![Notes_240424_104859](https://github.com/npureaun/image/assets/98468118/003cbdcd-2093-4132-82ec-60d4cfa2899e)
 
 ---
 ## 🪐 기능 설명
