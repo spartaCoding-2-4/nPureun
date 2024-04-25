@@ -3,8 +3,7 @@ package `class`
 import java.util.*
 
 class StringUtile {
-
-    /**의미없는 문자 필터링*/
+    
     private fun stringFilter(inputString: String):String{
         val calc = StringBuilder()
 
@@ -18,7 +17,6 @@ class StringUtile {
         return calc.toString()
     }
 
-    /**입력받은 문자열 변환*/
     fun convertString(inputString: String): String {
         val calc=stringFilter(inputString)
         var str = ""
@@ -47,13 +45,11 @@ class StringUtile {
             if (inputString.first() == '$') "$$str" else str
     }
 
-    /**공백문자 기준으로 파싱*/
     fun getParsingList(inputString: String):List<String>
     {
         return inputString.replace("\\s+".toRegex(), " ").trim().split(" ")
     }
 
-    /**후위연산으로 변환*/
     fun postfixConvert(inputString: String):List<String> {
         val operators = listOf('(', ')', '+', '-', '*', '/', '%')
 
@@ -85,7 +81,6 @@ class StringUtile {
         return postfix
     }
 
-    /**후위연산 우선순위*/
     private fun getPriority(operator: String): Int =
         when (operator) {
             "(", ")" -> 0

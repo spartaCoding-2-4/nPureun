@@ -2,7 +2,6 @@ package `class`
 
 class CalculateUtile {
 
-    /**계산함수*/
     private fun calculate(x: Double, y: Double, oper: String):Double
     {
         var result =0.0
@@ -27,7 +26,6 @@ class CalculateUtile {
         return result
     }
 
-    /**연쇄수식 계산*/
     fun postfixResult(postfix: List<String>) {
         val operators = listOf('(', ')', '+', '-', '*', '/', '%')
 
@@ -59,7 +57,6 @@ class CalculateUtile {
         }
     }
 
-    /**단일수식 계산*/
     fun singleResult(calculate: List<String>) {
         val firstVal=0
         val lastVal=2
