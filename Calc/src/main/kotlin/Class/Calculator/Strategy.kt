@@ -2,7 +2,7 @@ package Class.Calculator
 
 import Class.Calculator.Override.*
 
-enum class Strategy(val symbol: String, private val strategy: Calculator){
+enum class Strategy(private val symbol: String, private val strategy: Calculator){
     SUM("+", Summation()),
     SUB("-", Subtraction()),
     MUL("*", Multiplication()),
