@@ -19,7 +19,7 @@ class Manager() {
             var calculate = inputCalculate()
             if (calculate.first() == 'x') break
 
-            calculate = stringUt.convertString(calculate)
+            calculate = stringUt.parsingCalc(calculate)
             calcUt.postfixResult(stringUt.postfixConvert(calculate))
         }
         println("계산기를 종료합니다.")

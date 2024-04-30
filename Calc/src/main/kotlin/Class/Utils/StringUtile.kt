@@ -3,14 +3,7 @@ package Class.Utils
 import java.util.*
 
 class StringUtile {
-    private fun getPriority(operator: String): Int =
-        when (operator) {
-            "(", ")" -> 0
-            "+", "-" -> 1
-            "*", "/", "%" -> 2
-            else -> -1
-        }
-    
+
     private fun stringFilter(inputString: String):String{
         val calc = StringBuilder()
 
@@ -23,7 +16,7 @@ class StringUtile {
         return calc.toString()
     }
 
-    fun convertString(inputString: String): String {
+    fun parsingCalc(inputString: String): String {
         val calc=stringFilter(inputString)
         var str = ""
 
@@ -46,6 +39,14 @@ class StringUtile {
 
         return str.ifBlank { "-1" }
     }
+
+    private fun getPriority(operator: String): Int =
+        when (operator) {
+            "(", ")" -> 0
+            "+", "-" -> 1
+            "*", "/", "%" -> 2
+            else -> -1
+        }
 
     fun postfixConvert(inputString: String):List<String> {
         val stack = Stack<String>()
