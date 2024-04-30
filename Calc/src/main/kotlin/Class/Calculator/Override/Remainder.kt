@@ -1,6 +1,8 @@
-package `class`
+package Class.Calculator.Override
 
-class Remainder() : Calculator()
+import Class.Calculator.Calculator
+
+class Remainder() : Calculator
 {
     override fun calculateResult(x:Double, y:Double): Double =
         if(y==0.0) Double.NaN

@@ -1,4 +1,4 @@
-import `class`.Manager
+import Class.Manager
 
 fun main()
 {

@@ -1,4 +1,4 @@
-package `class`
+package Class.Utils
 
 import java.util.*
 

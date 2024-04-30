@@ -1,4 +1,7 @@
-package `class`
+package Class
+
+import Class.Utils.CalculateUtile
+import Class.Utils.StringUtile
 
 class Manager()
 {

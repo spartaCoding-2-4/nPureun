@@ -1,21 +1,17 @@
-package `class`
+package Class.Utils
+
+import Class.Calculator.Strategy
 
 class CalculateUtile {
 
     private fun calculate(x: Double, y: Double, oper: String):Double
     {
-        var result =0.0
+        var result=0.0
         try {
-            result=when (oper) {
-                "+" -> Summation().calculateResult(x, y)
-                "-" -> Subtraction().calculateResult(x, y)
-                "*" -> Multiplication().calculateResult(x, y)
-                "/" -> Division().calculateResult(x, y)
-                "%" -> Remainder().calculateResult(x, y)
-                else -> {
-                    throw Error("올바르지 않은 연산자 입니다.")
-                }
-            }
+            val operation = Strategy.fromSymbol(oper)
+                ?: throw IllegalArgumentException("올바르지 않은 연산자 입니다.")
+
+            result = operation.running(x,y)
         }
         catch (e:NumberFormatException) {
             println("올바르지 않은 숫자형식 입니다.")
@@ -35,12 +31,15 @@ class CalculateUtile {
                 when (token) {
                     in operators.toString() -> {
                         if(stack.size<2) throw Error("올바르지 않은 입력입니다.")
+
                         val right = stack.removeAt(stack.lastIndex)
                         val left = stack.removeAt(stack.lastIndex)
                         val result = calculate(left,right,token)
+
                         if(result.isNaN()||result.isInfinite())
                             throw Error("올바르지 않은 식입니다.")
-                        else stack.add(result)
+
+                        stack.add(result)
                     }
                     else -> {
                         stack.add(token.toDouble())
@@ -49,10 +48,12 @@ class CalculateUtile {
             }
             if (stack.size != 1) throw Error("잘못된 계산입니다.")
             println("계산 결과: ${stack.first()}")
+
         } catch (e: Error) {
             println(e.message)
-        }
-        catch (e:NumberFormatException) {
+            return
+        }catch (e: NumberFormatException)
+        {
             println("올바르지 않은 숫자형식 입니다.")
         }
     }
@@ -70,10 +71,12 @@ class CalculateUtile {
             val y = calculate[lastVal].toDouble()
             result=calculate(x,y,calculate[operator])
             if(result.isNaN()||result.isInfinite()) throw Error("올바르지 않은 식입니다.")
-            else println("계산 결과: $result")
+
+            println("계산 결과: $result")
         }
         catch (e: Error) {
             println(e.message)
+            return
         }
         catch (e:NumberFormatException) {
             println("올바르지 않은 숫자형식 입니다.")

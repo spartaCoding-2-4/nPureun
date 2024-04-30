@@ -1,6 +1,8 @@
-package `class`
+package Class.Calculator.Override
 
-class Multiplication() : Calculator()
+import Class.Calculator.Calculator
+
+class Multiplication() : Calculator
 {
     override fun calculateResult(x:Double, y:Double) : Double =
         String.format("%.2f",x*y).toDouble()
