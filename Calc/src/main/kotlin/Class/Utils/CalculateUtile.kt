@@ -6,23 +6,18 @@ import java.util.Stack
 class CalculateUtile {
 
     private fun calculate(y: Double, x: Double, oper: String): Double {
-        var result = 0.0
-
         val operation = Strategy.fromSymbol(oper)
             ?: throw IllegalArgumentException("올바르지 않은 연산자 입니다.")
 
-        result = operation.running(x, y)
-
-        return result
+        return operation.running(x, y)
     }
 
     fun postfixResult(postfix: List<String>) {
-        val operators = listOf('(', ')', '+', '-', '*', '/', '%')
         val stack = Stack<Double>()
 
         try {
             for (token in postfix) {
-                if (token in operators.toString()) {
+                if (token in "(+-*/%)") {
                     if (stack.size < 2) throw IllegalArgumentException("올바르지 않은 입력입니다.")
                     val result = calculate(stack.pop(), stack.pop(), token)
 

@@ -14,9 +14,8 @@ class StringUtile {
     private fun stringFilter(inputString: String):String{
         val calc = StringBuilder()
 
-        val operators = listOf('(', ')', '+', '-', '*', '/', '%')
         inputString.forEach {
-            if(it.isDigit()||it in operators || it=='.')
+            if(it.isDigit()||it in "(+-*/%)" || it=='.')
                 calc.append(it.toString())
         }
 
@@ -28,14 +27,13 @@ class StringUtile {
         val calc=stringFilter(inputString)
         var str = ""
 
-        val operators = listOf('(', ')', '+', '-', '*', '/', '%')
         calc.forEachIndexed { i, it ->
             if (it == '.' &&//소수점 판별. 소수의 기본 형태는 0.0 이다.
                 (i - 1 in calc.indices && calc[i - 1].isDigit()) &&
                 (i + 1 in calc.indices && calc[i + 1].isDigit())) {
                 str += it
             }
-            else if (it in operators) {//연산자 판별
+            else if (it in  "(+-*/%)") {//연산자 판별
                 str+= " "+
                 if ((it == '-') && ((i == 0) || (calc[i - 1] in ("+-*/%")))) it
                 else "$it "
@@ -50,12 +48,10 @@ class StringUtile {
     }
 
     fun postfixConvert(inputString: String):List<String> {
-        val operators = listOf('(', ')', '+', '-', '*', '/', '%')
-
         val stack = Stack<String>()
         val postfix = mutableListOf<String>()
         inputString.split(" ").filter { it.isNotBlank() }.forEach { token ->
-            if (token in operators.toString()) {
+            if (token in "(+-*/%)") {
                 if (token == "(")
                     stack.add(token)
                 else if (token == ")") {
