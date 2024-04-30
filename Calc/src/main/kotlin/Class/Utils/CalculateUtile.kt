@@ -33,10 +33,8 @@ class CalculateUtile {
             println("계산 결과: ${stack.first()}")
         } catch (e: NumberFormatException) {
             println("올바르지 않은 숫자형식 입니다.")
-            return
         } catch (e: RuntimeException) {
             println(e.message)
-            return
         }
     }
 }
